@@ -80,7 +80,7 @@ const Events: React.FC = () => {
             {[
               { label: 'Total Events', value: events.length.toString(), icon: Calendar },
               { label: 'Upcoming', value: upcomingEvents.length.toString(), icon: Clock },
-              { label: 'Active Participants', value: '150+', icon: Users },
+              { label: 'Active Participants', value: '50+', icon: Users },
               { label: 'Locations', value: '5+', icon: MapPin },
             ].map((stat, index) => (
               <div key={index} className="text-center group">

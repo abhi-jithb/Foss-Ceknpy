@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   const stats = [
-    { icon: Users, label: 'Active Members', value: '500+' },
-    { icon: Code, label: 'Projects', value: '100+' },
-    { icon: Heart, label: 'Contributors', value: '200+' },
+    { icon: Users, label: 'Active Members', value: '50+' },
+    { icon: Code, label: 'Projects', value: '20+' },
+    { icon: Heart, label: 'Contributors', value: '10+' },
   ];
 
   return (
