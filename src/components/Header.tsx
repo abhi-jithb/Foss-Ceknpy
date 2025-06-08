@@ -10,6 +10,7 @@ const Header: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Events', href: '/events' },
+    { name: 'Projects', href: '/projects'}
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -61,7 +62,7 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden animate-fade-in">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
+            <div className=" px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
               {navigation.map((item) => (
                 <Link
                   key={item.name}

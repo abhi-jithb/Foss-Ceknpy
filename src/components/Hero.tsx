@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           {/* Content */}
           <div className="space-y-8 animate-slide-up">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Welcome to{' '}
                 <span className="text-foss-green">FOSS CLUB</span><span> CEKnpy</span>
               </h1>
