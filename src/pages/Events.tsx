@@ -76,7 +76,7 @@ const Events: React.FC = () => {
           </div>
 
           {/* Event Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-4 lg:grid-cols-4 gap-8 sm:grid-cols-4 gap-2">
             {[
               { label: 'Total Events', value: events.length.toString(), icon: Calendar },
               { label: 'Upcoming', value: upcomingEvents.length.toString(), icon: Clock },
@@ -95,56 +95,60 @@ const Events: React.FC = () => {
         </div>
       </section>
 
-      {/* Filters Section */}
-      <section className="py-8 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Search */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search events, topics, or tags..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-foss-green focus:border-transparent transition-all duration-200"
-              />
-            </div>
+     <section className="py-8 bg-white border-b border-gray-200">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Outer flex: on lg screens, row; on small screens, column */}
+    <div className="flex flex-col gap-4 lg:flex-row lg:gap-6">
+      {/* Search - always full width on small, flex-1 on large */}
+      <div className="relative w-full lg:flex-1">
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+        <input
+          type="text"
+          placeholder="Search events, topics, or tags..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-foss-green focus:border-transparent transition-all duration-200"
+        />
+      </div>
 
-            {/* Category Filter */}
-            <div className="relative">
-              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-foss-green focus:border-transparent transition-all duration-200 bg-white min-w-[200px]"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>
-                    {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Status Filter */}
-            <div className="relative">
-              <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <select
-                value={selectedStatus}
-                onChange={(e) => setSelectedStatus(e.target.value)}
-                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-foss-green focus:border-transparent transition-all duration-200 bg-white min-w-[180px]"
-              >
-                {statuses.map(status => (
-                  <option key={status} value={status}>
-                    {status === 'all' ? 'All Events' : status.charAt(0).toUpperCase() + status.slice(1)}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
+      {/* Filters: row on small screens, column on large */}
+      <div className="flex flex-row gap-2 w-full lg:w-auto lg:flex-row">
+        {/* Category Filter */}
+        <div className="relative flex-1">
+          <Filter className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="pl-8 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-foss-green focus:border-transparent transition-all duration-200 bg-white w-full min-w-0"
+          >
+            {categories.map(category => (
+              <option key={category} value={category}>
+                {category === 'all' ? 'All Categories' : category}
+              </option>
+            ))}
+          </select>
         </div>
-      </section>
+
+        {/* Status Filter */}
+        <div className="relative flex-1">
+          <Calendar className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <select
+            value={selectedStatus}
+            onChange={(e) => setSelectedStatus(e.target.value)}
+            className="pl-8 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-foss-green focus:border-transparent transition-all duration-200 bg-white w-full min-w-0"
+          >
+            {statuses.map(status => (
+              <option key={status} value={status}>
+                {status === 'all' ? 'All Events' : status.charAt(0).toUpperCase() + status.slice(1)}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Events Content */}
       <section className="py-16">
