@@ -126,6 +126,7 @@ const Events: React.FC = () => {
                 {category === 'all' ? 'All Categories' : category}
               </option>
             ))}
+            
           </select>
         </div>
 

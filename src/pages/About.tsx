@@ -206,43 +206,59 @@ const About: React.FC = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From humble beginnings to a thriving community - here's how we've grown together.
-            </p>
-          </div>
+    <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Our Journey
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        From humble beginnings to a thriving community - here's how we've grown together.
+      </p>
+    </div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-foss-green/20"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-full max-w-md ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-                      <div className="flex items-center mb-3">
-                        <div className="w-10 h-10 bg-foss-green rounded-full flex items-center justify-center mr-3">
-                          <Award className="w-5 h-5 text-white" />
-                        </div>
-                        <span className="text-sm font-medium text-foss-green">{milestone.year}</span>
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">{milestone.event}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{milestone.description}</p>
-                    </div>
+    <div className="relative ">
+      {/* Timeline vertical line */}
+      <div className="hidden sm:block absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-foss-green/20"></div>
+      <div className="block sm:hidden absolute left-4 h-full w-0.5 bg-foss-green/20"></div>
+      
+      <div className="space-y-12">
+        {milestones.map((milestone, index) => (
+          <div
+            key={index}
+            className={
+              `relative flex items-center ` +
+              `sm:${index % 2 === 0 ? 'justify-start' : 'justify-end'} justify-start`
+            }
+          >
+            <div className={
+              `w-full max-w-md ` +
+              `sm:${index % 2 === 0 ? 'pr-8' : 'pl-8'} pr-0`
+            }>
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-3">
+                  <div className="w-10 h-10 bg-foss-green rounded-full flex items-center justify-center mr-3">
+                    <Award className="w-5 h-5 text-white" />
                   </div>
-                  
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-foss-green rounded-full border-4 border-white shadow-lg"></div>
+                  <span className="text-sm font-medium text-foss-green">{milestone.year}</span>
                 </div>
-              ))}
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{milestone.event}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{milestone.description}</p>
+              </div>
             </div>
+            {/* Timeline dot */}
+            <div className={
+              `absolute ` +
+              `sm:left-1/2 sm:transform sm:-translate-x-1/2 left-4 transform -translate-x-1/2 ` +
+              `w-4 h-4 bg-foss-green rounded-full border-4 border-white shadow-lg`
+            }></div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

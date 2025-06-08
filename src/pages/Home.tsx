@@ -159,10 +159,10 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { label: 'Community Members', value: '500+', icon: Users },
-              { label: 'Open Source Projects', value: '100+', icon: Code },
+              { label: 'Community Members', value: '50+', icon: Users },
+              { label: 'Open Source Projects', value: '10+', icon: Code },
               { label: 'GitHub Stars', value: '2.5K+', icon: Star },
-              { label: 'Code Contributions', value: '1000+', icon: Github },
+              { label: 'Code Contributions', value: '100+', icon: Github },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-foss-green/10 rounded-2xl mb-4 group-hover:bg-foss-green group-hover:scale-110 transition-all duration-300">

@@ -23,7 +23,7 @@ const Header: React.FC = () => {
               <div className="p-2 bg-foss-green rounded-lg group-hover:bg-foss-green-dark transition-colors duration-200">
                 <Code className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">FOSS CLUB</span>
+              <span className="text-xl font-bold text-gray-900">FOSS CLUB CEKnpy</span>
             </Link>
           </div>
 

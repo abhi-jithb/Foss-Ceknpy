@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             <div>
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Welcome to{' '}
-                <span className="text-foss-green">FOSS CLUB</span>
+                <span className="text-foss-green">FOSS CLUB</span><span> CEKnpy</span>
               </h1>
               <p className="text-xl text-gray-600 mt-6 leading-relaxed">
                 Join our vibrant community of open source enthusiasts, developers, and innovators. 
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
                   <Users className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">500+ Members</div>
+                  <div className="font-semibold text-gray-900">50+ Members</div>
                   <div className="text-sm text-gray-600">Growing Daily</div>
                 </div>
               </div>
