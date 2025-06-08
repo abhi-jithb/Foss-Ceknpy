@@ -66,7 +66,7 @@ export const events: Event[] = [
     date: '2025-06-08',
     time: '7:00 pm',
     location: 'Google Meet',
-    status: 'ongoing',
+    status: 'past',
     category: 'Workshop',
     maxAttendees: 200,
     currentAttendees: 186,
