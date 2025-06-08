@@ -27,15 +27,15 @@ const About: React.FC = () => {
 
   const team = [
     {
-      name: 'Sarah Chen',
+      name: 'Abhijith H',
       role: 'Community Lead',
-      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
+      image: '../assets/Abhijith_H.jpg',
       bio: 'Full-stack developer with 8+ years of experience in open source projects.'
     },
     {
       name: 'Marcus Rodriguez',
       role: 'Technical Director',
-      image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg',
+      image: 'https://drive.google.com/file/d/1HmeS6QkAGUzAXPyEVpSAQ49BRlBEgxTU/view?usp=drive_link',
       bio: 'DevOps engineer passionate about Linux systems and container technologies.'
     },
     {

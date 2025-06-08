@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
             © 2025 FOSS CLUB. Open source community.
           </p>
           <p className="text-gray-400 text-sm flex items-center mt-2 sm:mt-0">
-            Made with <Heart className="w-4 h-4 text-red-500 mx-1" /> by the community
+            Made with <Heart className="w-4 h-4 text-green-500 mx-1" /> by <a href='https://linkedin.com/in/abhi-jithb'>Abhijith</a>
           </p>
         </div>
       </div>
