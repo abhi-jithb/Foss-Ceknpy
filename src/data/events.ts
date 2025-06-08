@@ -1,100 +1,147 @@
 import { Event } from '../types';
+import day1 from '../assets/events/day1.jpeg'
+import day2 from '../assets/events/day2.jpeg'
+import day3 from '../assets/events/day3.jpeg'
+import day4 from '../assets/events/day4.jpeg'
+import day5 from '../assets/events/day5.jpeg'
+import day6 from '../assets/events/day6.jpeg'
+// If you have more images, import them as needed
 
 export const events: Event[] = [
   {
     id: '1',
-    title: 'Introduction to Open Source Development',
-    description: 'Learn the fundamentals of contributing to open source projects, understanding Git workflows, and making your first pull request.',
-    date: '2025-02-15',
-    time: '14:00',
-    location: 'Main Auditorium',
-    status: 'upcoming',
+    title: 'Boost Your Career with FOSS',
+    description: 'Discover how Free and Open Source Software (FOSS) can accelerate your career growth, enhance your skills, and expand your professional opportunities through real-world contributions and networking.',
+    date: '2025-06-05',
+    time: '7:00 pm',
+    location: 'Google Meet',
+    status: 'past',
     category: 'Workshop',
     maxAttendees: 100,
     currentAttendees: 45,
-    images: [
-      'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg',
-      'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg'
-    ],
-    registrationUrl: '#',
-    tags: ['Git', 'GitHub', 'Beginner'],
-    speaker: 'Sarah Chen',
+    images: [day1],
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    tags: ['FOSS', 'Career', 'Professional Development'],
+    speaker: 'Riya P Mathew',
     level: 'beginner'
   },
   {
     id: '2',
-    title: 'Linux System Administration Bootcamp',
-    description: 'Comprehensive hands-on workshop covering Linux system administration, server management, and DevOps practices.',
-    date: '2025-01-28',
+    title: 'JavaScript: Creating Web Magic',
+    description: 'Explore the power of JavaScript in modern web development, from dynamic interfaces to interactive experiences, and learn how open source libraries can help you innovate online.',
+    date: '2025-06-06',
     time: '10:00',
-    location: 'Computer Lab 1',
-    status: 'ongoing',
-    category: 'Bootcamp',
+    location: 'Google Meet',
+    status: 'past',
+    category: 'Workshop',
     maxAttendees: 30,
     currentAttendees: 28,
-    images: [
-      'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg',
-      'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg'
-    ],
-    registrationUrl: '#',
-    tags: ['Linux', 'DevOps', 'System Admin'],
-    speaker: 'Marcus Rodriguez',
-    level: 'intermediate'
+    images: [day2],
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    tags: ['JavaScript', 'Web Development', 'Frontend'],
+    speaker: 'Misthah KP',
+    level: 'beginner'
   },
   {
     id: '3',
-    title: 'Contributing to Kubernetes',
-    description: 'Advanced session on contributing to one of the most popular open source container orchestration platforms.',
-    date: '2025-02-20',
-    time: '16:00',
-    location: 'Tech Hub',
-    status: 'upcoming',
-    category: 'Advanced Workshop',
+    title: 'GitStart: Version Control Essentials',
+    description: 'A hands-on introduction to Git and GitHub, covering essential workflows, collaboration strategies, and how to contribute to open source projects effectively.',
+    date: '2025-06-07',
+    time: '7:00 pm',
+    location: 'Google Meet',
+    status: 'past',
+    category: 'Workshop',
     maxAttendees: 25,
     currentAttendees: 18,
-    images: [
-      'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg',
-      'https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg'
-    ],
-    registrationUrl: '#',
-    tags: ['Kubernetes', 'Cloud', 'Containers'],
-    speaker: 'Dr. Emily Watson',
-    level: 'advanced'
+    images: [day3],
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    tags: ['Git', 'GitHub', 'Collaboration'],
+    speaker: 'Abhimanyu R B',
+    level: 'beginner'
   },
   {
     id: '4',
-    title: 'FOSS CLUB Annual Hackathon 2024',
-    description: '48-hour hackathon focused on building solutions for social good using open source technologies.',
-    date: '2024-12-15',
-    time: '09:00',
-    location: 'Innovation Center',
-    status: 'past',
-    category: 'Hackathon',
+    title: 'Data Visualization in Open Source',
+    description: 'Learn the fundamentals of data visualization using open source tools, and discover how to turn raw data into compelling, actionable insights.',
+    date: '2025-06-08',
+    time: '7:00 pm',
+    location: 'Google Meet',
+    status: 'ongoing',
+    category: 'Workshop',
     maxAttendees: 200,
     currentAttendees: 186,
-    images: [
-      'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg',
-      'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg'
-    ],
-    tags: ['Hackathon', 'Social Good', 'Competition'],
-    level: 'intermediate'
+    images: [day4],
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    speaker: 'Alfia Hussian',
+    tags: ['Data Visualization', 'Open Source', 'Analytics'],
+    level: 'beginner'
   },
   {
     id: '5',
-    title: 'Open Source Licensing Workshop',
-    description: 'Understanding different open source licenses, legal implications, and choosing the right license for your project.',
-    date: '2024-11-20',
-    time: '15:30',
-    location: 'Conference Room A',
-    status: 'past',
-    category: 'Educational',
+    title: 'Cybersecurity and Open Source',
+    description: 'Understand the intersection of cybersecurity and open source—explore best practices, tools, and how community-driven solutions help secure today’s digital world.',
+    date: '2025-06-09',
+    time: '7:00 pm',
+    location: 'Google Meet',
+    status: 'upcoming',
+    category: 'Workshop',
     maxAttendees: 50,
     currentAttendees: 42,
-    images: [
-      'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg'
-    ],
-    tags: ['Legal', 'Licensing', 'Documentation'],
-    speaker: 'Prof. James Wilson',
+    images: [day5],
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    tags: ['Cybersecurity', 'Open Source', 'Security'],
+    speaker: 'Aron Anil P',
+    level: 'intermediate'
+  },
+  {
+    id: '6',
+    title: 'Docker: Streamlining Development with Containers',
+    description: 'Get started with Docker and containerization, learn how open source container tools are transforming software development, and simplify your deployment workflows.',
+    date: '2025-06-10',
+    time: '7:00 pm',
+    location: 'Google Meet',
+    status: 'upcoming',
+    category: 'Workshop',
+    maxAttendees: 40,
+    currentAttendees: 35,
+    images: [day6],
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    tags: ['Docker', 'Containers', 'DevOps'],
+    speaker: 'Abhijith B',
+    level: 'beginner'
+  },
+  {
+    id: '7',
+    title: 'FOSS Applications in the Real World',
+    description: 'Explore real-world case studies of FOSS adoption across industries, and see how open source solutions are driving innovation and solving practical problems.',
+    date: '2025-06-11',
+    time: '7:00 pm',
+    location: 'Google Meet',
+    status: 'upcoming',
+    category: 'Seminar',
+    maxAttendees: 60,
+    currentAttendees: 54,
+    images: [], // Add day7 if you have it, e.g., [day7]
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    tags: ['FOSS', 'Industry', 'Case Studies'],
+    speaker: 'Priya Nair',
+    level: 'intermediate'
+  },
+  {
+    id: '8',
+    title: 'Building Without Code: Low-Code Tools & Career Paths in Open Source',
+    description: 'Discover how low-code and no-code platforms are making open source accessible to everyone, and learn how to build powerful applications and launch new career paths without deep coding expertise.',
+    date: '2025-06-12',
+    time: '7:00 pm',
+    location: 'Google Meet',
+    status: 'upcoming',
+    category: 'Workshop',
+    maxAttendees: 80,
+    currentAttendees: 63,
+    images: [], // Add day8 if you have it, e.g., [day8]
+    registrationUrl: 'https://lu.ma/ykt85xcr',
+    tags: ['Low-Code', 'No-Code', 'Career'],
+    speaker: '...',
     level: 'beginner'
   }
 ];

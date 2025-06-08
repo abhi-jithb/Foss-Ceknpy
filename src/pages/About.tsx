@@ -1,5 +1,9 @@
 import React from 'react';
 import { Users, Target, Heart, Code, Globe, Lightbulb, Award, BookOpen } from 'lucide-react';
+import lead from '../assets/Abhijith_H.jpg'
+import coLead from '../assets/Johan_George.jpg'
+import designLead from '../assets/abla.jpeg'
+import contentLead from '../assets/chinthak.jpeg'
 
 const About: React.FC = () => {
   const values = [
@@ -29,26 +33,26 @@ const About: React.FC = () => {
     {
       name: 'Abhijith H',
       role: 'Community Lead',
-      image: '../assets/Abhijith_H.jpg',
-      bio: 'Full-stack developer with 8+ years of experience in open source projects.'
+      image: lead,
+      bio: 'Curious open-sourcer, Exploring Tech'
     },
     {
-      name: 'Marcus Rodriguez',
-      role: 'Technical Director',
-      image: 'https://drive.google.com/file/d/1HmeS6QkAGUzAXPyEVpSAQ49BRlBEgxTU/view?usp=drive_link',
-      bio: 'DevOps engineer passionate about Linux systems and container technologies.'
+      name: 'Johan George',
+      role: 'Co-Lead',
+      image: coLead,
+      bio: 'Front-End developer'
     },
     {
-      name: 'Dr. Emily Watson',
-      role: 'Education Coordinator',
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg',
-      bio: 'Computer science professor dedicated to making technology education accessible.'
+      name: 'Abla Hussain',
+      role: 'Design Lead',
+      image: designLead,
+      bio: 'Design cool and user friendly posters.'
     },
     {
-      name: 'James Wilson',
-      role: 'Legal Advisor',
-      image: 'https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg',
-      bio: 'Legal expert specializing in open source licensing and intellectual property.'
+      name: 'Chinthak',
+      role: 'Content Lead',
+      image: contentLead,
+      bio: 'Social media manager'
     }
   ];
 
