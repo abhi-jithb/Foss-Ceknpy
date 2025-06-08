@@ -130,17 +130,22 @@ const EventCard: React.FC<EventCardProps> = ({ event, onSetReminder, onRegister 
             <>
               {event.registrationUrl && (
                 <button
-                  onClick={() => onRegister?.(event.id)}
-                  disabled={isEventFull}
-                  className={`flex-1 flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-                    isEventFull
+                    onClick={() => {
+                                      if (event.registrationUrl && !isEventFull) {
+                                                     window.open(event.registrationUrl, '_blank', 'noopener,noreferrer');
+                                               }
+                                    }}
+                      disabled={isEventFull}
+                      className={`flex-1 flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
+                      isEventFull
                       ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                       : 'bg-foss-green text-white hover:bg-foss-green-dark hover:shadow-md'
-                  }`}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
+                     }`}
+                  >
+                   <ExternalLink className="w-4 h-4 mr-2" />
                   {isEventFull ? 'Event Full' : 'Register'}
                 </button>
+
               )}
               <button
                 onClick={() => onSetReminder?.(event.id)}
